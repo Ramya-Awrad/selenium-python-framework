@@ -1,6 +1,18 @@
+# Virtual Environment
 .venv/
+
+# Python Cache
 __pycache__/
-reports/
-screenshots/
-logs/
+*.pyc
+
+# Pytest Cache
 .pytest_cache/
+
+# Test Reports
+reports/
+
+# Screenshots
+screenshots/
+
+# Logs
+logs/
