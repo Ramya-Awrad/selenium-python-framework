@@ -5,7 +5,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 console_handler = logging.StreamHandler()
-file_handler = logging.FileHandler("automation.log")
+file_handler = logging.FileHandler("logs/automation.log")
 
 formatter = logging.Formatter(
     "%(asctime)s - %(levelname)s - %(message)s"
