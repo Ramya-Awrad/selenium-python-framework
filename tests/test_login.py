@@ -1,13 +1,16 @@
+import pytest
 from pages.login_page import LoginPage
 from utils.config_reader import URL
 
 from utils.logger import logger
 from utils.json_reader import read_json
 
-def test_login(driver):
+test_data = read_json("testdata/login_data.json")
+
+@pytest.mark.parametrize("login_data", test_data)
+def test_login(driver, login_data):
     logger.info("Starting login test")
     driver.get(URL)
-    login_data = read_json("testdata/login_data.json")
     logger.info("Opened SauceDemo application")
 
 
