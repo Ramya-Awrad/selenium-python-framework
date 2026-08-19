@@ -7,6 +7,8 @@ from utils.json_reader import read_json
 
 test_data = read_json("testdata/login_data.json")
 
+@pytest.mark.smoke
+@pytest.mark.sanity
 @pytest.mark.parametrize("login_data", test_data)
 def test_login(driver, login_data):
     logger.info("Starting login test")
